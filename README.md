@@ -41,3 +41,4 @@ http://localhost:4000/graphiql?query=%7B%0A%20%20painting(id%3A%225b255f990b1ddc
 
 ## 7 - Swagger
 #only 1st time: yarn add hapi-swagger inert vision
+http://localhost:4000/documentation

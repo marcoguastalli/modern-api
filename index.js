@@ -79,9 +79,9 @@ const init = async () => {
 		},
 		{
 			method: 'POST',
-			path: '/api/v1/paintings',
+			path: '/api/v1/paintings/',
 			config: {
-				description: 'Get a specific painting by ID.',
+				description: 'Create a Painting.',
 				tags: ['api', 'v1', 'painting']
 			},
 			handler: (req, reply) => {
