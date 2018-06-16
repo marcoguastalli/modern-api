@@ -10,6 +10,7 @@ const Vision = require('vision');
 const HapiSwagger = require('hapi-swagger');
 const Pack = require('./package');
 
+
 const server = hapi.server({
 	port: 4000,
 	host: 'localhost'
@@ -37,7 +38,7 @@ const init = async () => {
 		}
 	]);
 
-    await server.register({
+	await server.register({
 		plugin: graphiqlHapi,
 		options: {
 			path: '/graphiql',
@@ -62,6 +63,7 @@ const init = async () => {
 			}
 		}
 	});
+
 
 	server.route([
 		{
@@ -94,8 +96,16 @@ const init = async () => {
 			}
 		}
 	]);
+
 	await server.start();
 	console.log(`Server running at: ${server.info.uri}`);
-}
+};
+
+process.on('unHandledRejection', (err) => {
+	if (err) {
+		console.log(err);
+		process.exit(1);
+	}
+});
 
 init();
