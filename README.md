@@ -16,3 +16,4 @@ cd /Users/marcoguastalli/dev/repository/git/nodejs/modern-api
 #yarn add hapi nodemon
 node index.js
 Server running at: http://localhost:4000
+#yarn add mongoose
