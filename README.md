@@ -16,4 +16,12 @@ cd /Users/marcoguastalli/dev/repository/git/nodejs/modern-api
 #yarn add hapi nodemon
 node index.js
 Server running at: http://localhost:4000
+
+## 3 - Mongoose
 #yarn add mongoose
+
+## 4 - GET
+http://localhost:4000/api/v1/paintings
+
+## 5 - POST
+curl -d "name=Mona%20Lista&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMona_Lisa&technique=italiana" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost:4000/api/v1/paintings
