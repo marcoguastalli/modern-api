@@ -1,5 +1,6 @@
 const hapi = require('hapi');
 const mongoose = require('mongoose');
+const Painting = require('./models/Painting');
 
 const server = hapi.server({
 	port: 4000,
@@ -13,13 +14,35 @@ mongoose.connection.once('open', () => {
 });
 
 const init = async () => {
+
 	server.route([
 		{
 			method: 'GET',
-			path: '/',
-
+			path: '/api/v1/paintings',
+			config: {
+				description: 'Get all the paintings',
+				tags: ['api', 'v1', 'painting']
+			},
 			handler: (req, reply) => {
-				return "<h1>My Modern API with mongoose</h1>";
+				return Painting.find();
+			}
+		},
+		{
+			method: 'POST',
+			path: '/api/v1/paintings',
+			config: {
+				description: 'Get a specific painting by ID.',
+				tags: ['api', 'v1', 'painting']
+			},
+			handler: (req, reply) => {
+				const { name, url, technique } = req.payload;
+				const painting = new Painting({
+					name,
+					url,
+					technique
+				});
+
+				return painting.save();
 			}
 		}
 	]);
