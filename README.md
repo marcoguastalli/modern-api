@@ -30,4 +30,11 @@ http://localhost:4000/api/v1/paintings
 curl -d "name=Mona%20Lista&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMona_Lisa&technique=italiana" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost:4000/api/v1/paintings
 
 ## 6 - GraphQL
-yarn add graphql apollo-server-hapi
+#only 1st time: yarn add graphql apollo-server-hapi
+http://localhost:4000/graphiql
+{
+  painting(id:"5b255f990b1ddc07d3b6aa62"){
+    name
+  }
+}
+http://localhost:4000/graphiql?query=%7B%0A%20%20painting(id%3A%225b255f990b1ddc07d3b6aa62%22)%7B%0A%20%20%20%20name%0A%20%20%7D%0A%7D
