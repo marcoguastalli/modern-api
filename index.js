@@ -4,6 +4,12 @@ const { graphqlHapi, graphiqlHapi } = require('apollo-server-hapi');
 const schema = require('./graphql/schema');
 const Painting = require('./models/Painting');
 
+/* swagger section */
+const Inert = require('inert');
+const Vision = require('vision');
+const HapiSwagger = require('hapi-swagger');
+const Pack = require('./package');
+
 const server = hapi.server({
 	port: 4000,
 	host: 'localhost'
@@ -16,6 +22,20 @@ mongoose.connection.once('open', () => {
 });
 
 const init = async () => {
+
+	await server.register([
+		Inert,
+		Vision,
+		{
+			plugin: HapiSwagger,
+			options: {
+				info: {
+					title: 'Paintings API Documentation',
+					version: Pack.version
+				}
+			}
+		}
+	]);
 
     await server.register({
 		plugin: graphiqlHapi,
