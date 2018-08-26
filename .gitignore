@@ -2,14 +2,15 @@
 .DS_Store
 .idea
 .idea/*
-.idea/vcs.xml
 .idea/misc.xml
 *.iml
 *.iws
 *.lst
 out/*
+lib/*
 target/*
 build/*
+.gradle/*
 gradle/*
 gradlew
 gradlew.bat
