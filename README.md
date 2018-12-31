@@ -16,7 +16,7 @@ mongo --host 127.0.0.1:27017
 ## 2 - node
 #only 1st time: npm init -y
 #only 1st timeyarn add hapi nodemon
-cd /Users/marco27/dev/repository/git/nodejs/modern-api
+cd /Users/marco27/dev/repository/git/modern-api
 node index.js
     Server running at: http://localhost:4000
 
@@ -27,7 +27,7 @@ node index.js
 http://localhost:4000/api/v1/paintings
 
 ## 5 - POST
-curl -d "name=Mona%20Lista&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMona_Lisa&technique=italiana" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost:4000/api/v1/paintings
+curl -d "name=Mona%20Lista&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMona_Lisa&technique=italiana" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost:4000/api/v1/paintings/
 
 ## 6 - GraphQL
 #only 1st time: yarn add graphql apollo-server-hapi
