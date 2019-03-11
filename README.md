@@ -8,15 +8,18 @@ https://github.com/wesharehoodies/graphql-nodejs-hapi-api
 ## 1 - MongoDB
 ### RUN
 mongod --dbpath /Users/marco27/opt/MongoDB/m27data/db
+mongod --dbpath /Users/marcoguastalli/opt/MongoDB/m27data/db
 ### LOGIN
 mongo --host 127.0.0.1:27017
     use local
+    show collections
     db.paintings.find();
 
 ## 2 - node
 #only 1st time: npm init -y
 #only 1st timeyarn add hapi nodemon
 cd /Users/marco27/dev/repository/git/modern-api
+cd /Users/marcoguastalli/dev/repository/git/modern-api
 node index.js
     Server running at: http://localhost:4000
 
