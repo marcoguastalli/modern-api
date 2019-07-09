@@ -41,6 +41,12 @@ http://localhost:4000/graphiql
   }
 }
 http://localhost:4000/graphiql?query=%7B%0A%20%20painting(id%3A%225b255f990b1ddc07d3b6aa62%22)%7B%0A%20%20%20%20name%0A%20%20%7D%0A%7D
+{
+  painting(id:"5c74ede944e5630b6cb1a5d0"){
+    name, technique
+  }
+}
+http://localhost:4000/graphiql?query=%7B%0A%20%20painting(id%3A%225c74ede944e5630b6cb1a5d0%22)%7B%0A%20%20%20%20name%2C%20technique%0A%20%20%7D%0A%7D
 
 ## 7 - Swagger
 #only 1st time: yarn add hapi-swagger inert vision
