@@ -36,7 +36,7 @@ curl -d "name=Mona%20Lista&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMona_Lisa
 #only 1st time: yarn add graphql apollo-server-hapi
 http://localhost:4000/graphiql
 {
-  painting(id:"5b255f990b1ddc07d3b6aa62"){
+  painting(id:"5c74ede944e5630b6cb1a5d0"){
     name
   }
 }
