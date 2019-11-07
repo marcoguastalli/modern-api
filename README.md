@@ -33,11 +33,13 @@ curl -d "name=Mona%20Lista&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMona_Lisa
 #only 1st time: yarn add graphql apollo-server-hapi
 http://localhost:4000/graphiql
 {
-  painting(id:"5c2a0a3b995e9e0e6cc8cf41"){
+  painting(id: "5c2a0a3b995e9e0e6cc8cf41") {
     name
   }
 }
+
 http://localhost:4000/graphiql?query=%7B%0A%20%20painting(id%3A%5c2a0a3b995e9e0e6cc8cf41%22)%7B%0A%20%20%20%20name%0A%20%20%7D%0A%7D
+
 ## 7 - Swagger
 #only 1st time: yarn add hapi-swagger inert vision
 http://localhost:4000/documentation
