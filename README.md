@@ -44,3 +44,5 @@ http://localhost:4000/documentation
 
 ## 8 - Update
 npm update
+npm install -g npm
+npm audit fix
