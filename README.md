@@ -15,7 +15,7 @@ mongo --host 127.0.0.1:27017
 
 ## 2 - node
 #only 1st time: npm init -y
-#only 1st timeyarn add hapi nodemon
+#only 1st time: yarn add hapi nodemon
 cd /Users/marco27/dev/repository/git/modern-api
 node index.js
     Server running at: http://localhost:4000
