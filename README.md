@@ -8,10 +8,11 @@ https://github.com/wesharehoodies/graphql-nodejs-hapi-api
 ## 1 - MongoDB
 ### RUN
 mongod --dbpath /Users/marco27/opt/MongoDB/m27data/db
+mongod --dbpath /Users/marcoguastalli/opt/MongoDB/m27data/db
 ### LOGIN
 mongo --host 127.0.0.1:27017
-    use local
-    db.paintings.find();
+use local
+db.paintings.find();
 
 ## 2 - node
 #only 1st time: npm init -y
