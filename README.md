@@ -7,17 +7,17 @@ https://github.com/wesharehoodies/graphql-nodejs-hapi-api
 
 ## 1 - MongoDB
 ### RUN
-mongod --dbpath /Users/marco27/opt/MongoDB/m27data/db
-mongod --dbpath /Users/marcoguastalli/opt/MongoDB/m27data/db
+mongod --dbpath $MONGODB_DATA/db
 ### LOGIN
 mongo --host 127.0.0.1:27017
 use local
+show collections
 db.paintings.find();
 
-## 2 - node
+## 2 - node~
+cd ~/git/modern-api
 #only 1st time: npm init -y
-#only 1st time: yarn add hapi nodemon
-cd /Users/marco27/dev/repository/git/modern-api
+#only 1st time: yarn add hapi nodemon | npm install hapi --save  
 node index.js
     Server running at: http://localhost:4000
 
@@ -34,7 +34,7 @@ curl -d "name=Mona%20Lista&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMona_Lisa
 #only 1st time: yarn add graphql apollo-server-hapi
 http://localhost:4000/graphiql
 {
-  painting(id: "5c2a0a3b995e9e0e6cc8cf41") {
+  painting(id: "5e92ed47f72d6b2bdff80960") {
     name
   }
 }
