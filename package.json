@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/marcoguastalli/modern-api#readme",
   "dependencies": {
-    "apollo-server-hapi": "^1.4.0",
+    "apollo-server-hapi": "^2.14.2",
     "graphql": "^0.13.2",
     "hapi": "^17.8.5",
     "hapi-swagger": "^9.4.2",
